@@ -15,3 +15,5 @@ with a big database, it might be a nightmare to create all those
 CRUD functions for your models.
 So here is a simple “Model CRUD Generator” code for CodeIgniter. 
 Please take a try on this code, any feedback will be appreciated!
+
+Check here for more information: http://giwebdesign.com.au/model-crud-generator-for-codeigniter/
