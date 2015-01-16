@@ -92,7 +92,7 @@
         $str_create .= " ); \n\n\t\t";
         $str_create .= "\$this->db->insert('" . strtolower($tb_name) . "', \$data);\n\t";
         $str_create .= "}\n\n\t";
-        $str_update .= " ) \n\n\t\t";
+        $str_update .= " ); \n\n\t\t";
         $str_update .= "\$this->db->where('" . $str_update_col . "', \$id);\n\t\t";
         $str_update .= "\$this->db->update('" . strtolower($tb_name) . "', \$data);\n\t";
         $str_update .= "}\n\n\t";
