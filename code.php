@@ -41,7 +41,7 @@
         $total_num = mysql_num_fields($total);
 
         $ftable = fopen($extract_folder.'/'.strtolower($tb_name) . "_model.php", "w");
-        $str = "<?php\n";
+        $str = "<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');\n";
         $str .= "class " . ucfirst($tb_name) . "_model extends CI_Model\n{\n\n\t";
         $str .= "function __construct()\n\t{\n\t\t";
         $str .= "parent::__construct();\n\t}\n\n\t";
@@ -89,10 +89,10 @@
             $index++;
         }
 
-        $str_create .= " ) \n\n\t\t";
+        $str_create .= " ); \n\n\t\t";
         $str_create .= "\$this->db->insert('" . strtolower($tb_name) . "', \$data);\n\t";
         $str_create .= "}\n\n\t";
-        $str_update .= " ) \n\n\t\t";
+        $str_update .= " ); \n\n\t\t";
         $str_update .= "\$this->db->where('" . $str_update_col . "', \$id);\n\t\t";
         $str_update .= "\$this->db->update('" . strtolower($tb_name) . "', \$data);\n\t";
         $str_update .= "}\n\n\t";
